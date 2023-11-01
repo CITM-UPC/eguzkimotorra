@@ -112,6 +112,8 @@ copy $(SolutionDir)vcpkg\installed\x64-windows\bin\*.* $(OutDir)</Command>
     <ClCompile Include="entities\components\component.cpp" />
     <ClInclude Include="entities\components\transform.h" />
     <ClCompile Include="entities\components\transform.cpp" />
+    <ClInclude Include="modules\importer.h" />
+    <ClCompile Include="modules\importer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

@@ -2,6 +2,7 @@
 #include "core/logger.h"
 #include "modules/window.h"
 #include "modules/input.h"
+#include "modules/importer.h"
 
 Application::Application() {
     //TODO: Create modules
@@ -9,6 +10,8 @@ Application::Application() {
     modules_.push_back(window);
     input = new MInput();
     modules_.push_back(input);
+    importer = new MImporter();
+    modules_.push_back(importer);
 }
 
 Application::~Application() {
@@ -85,7 +88,7 @@ update_status Application::Update() {
 bool Application::CleanUp() {
     bool ret = true;
 
-    for (auto item : modules_) {
+    for (auto& item : modules_) {
         ret = item->CleanUp() && ret;
     }
 

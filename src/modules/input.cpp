@@ -1,9 +1,11 @@
 #include "input.h"
 #include "SDL2/SDL.h"
-#include "core/logger.h"
+#include <cctype>
 #include <cstring>
 #include "core/application.h"
+#include "core/logger.h"
 #include "modules/window.h"
+#include "modules/importer.h"
 
 MInput::MInput(bool start_enabled) : Module(start_enabled) {};
 MInput::~MInput() {};
@@ -109,7 +111,15 @@ update_status MInput::PreUpdate(float dt)
             break;
 
         case SDL_DROPFILE:
-            // TODO: Handle this with filesystem
+            std::string file_path = e.drop.file;
+            std::string extension = file_path.substr(file_path.find_last_of('.') + 1, file_path.size());
+            for (char& character : extension) {
+                character = std::tolower(character);
+            }
+
+            if (extension == "fbx") {
+                app->importer->LoadMesh(file_path.c_str());
+            }
             break;
         }
     }

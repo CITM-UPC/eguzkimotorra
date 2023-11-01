@@ -10,6 +10,7 @@
 // Modules
 class MWindow;
 class MInput;
+class MImporter;
 
 class Application {
 public:
@@ -31,6 +32,7 @@ public:
     // TODO: Add modules
     MWindow* window = nullptr;
     MInput* input = nullptr;
+    MImporter* importer = nullptr;
 
     std::string name_;
     std::string version_;

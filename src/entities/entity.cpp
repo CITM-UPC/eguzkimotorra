@@ -16,7 +16,7 @@ Entity::~Entity() {
 }
 
 void Entity::DestroyAllChildren() {
-    for (auto child : children) {
+    for (auto& child : children) {
         child->DestroyAllChildren();
         delete child;
     }
