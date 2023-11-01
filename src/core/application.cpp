@@ -1,12 +1,14 @@
 #include "application.h"
 #include "core/logger.h"
 #include "modules/window.h"
+#include "modules/input.h"
 
 Application::Application() {
     //TODO: Create modules
     window = new MWindow();
     modules_.push_back(window);
-
+    input = new MInput();
+    modules_.push_back(input);
 }
 
 Application::~Application() {

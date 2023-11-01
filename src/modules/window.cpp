@@ -9,6 +9,7 @@ MWindow::MWindow(bool start_enabled) : Module (start_enabled) {
     // TODO: Maybe consider not hardcoding these
     width_ = 1024;
     height_ = 720;
+    screen_size_ = 1;
     aspect_ratio_ = width_ / float(height_);
 }
 
@@ -21,7 +22,7 @@ bool MWindow::Init() {
     const uint flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
 
     LOG("Initializing SDL Window");
-    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
+    if (SDL_InitSubSystem(SDL_INIT_VIDEO) != 0) {
         LOG("SDL_VIDEO was not initialized, the error is: %s", SDL_GetError());
         ret = false;
     }

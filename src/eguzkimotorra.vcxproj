@@ -104,6 +104,8 @@ copy $(SolutionDir)vcpkg\installed\x64-windows\bin\*.* $(OutDir)</Command>
     <ClCompile Include="core\logger.cpp" />
     <ClInclude Include="modules\window.h" />
     <ClCompile Include="modules\window.cpp" />
+    <ClInclude Include="modules\input.h" />
+    <ClCompile Include="modules\input.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
