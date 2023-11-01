@@ -25,7 +25,7 @@ bool MImporter::CleanUp() {
     aiDetachAllLogStreams();
 }
 
-void LoadMesh(const char* file_path) {
+void MImporter::LoadMesh(const char* file_path) {
     const aiScene* scene = aiImportFile(file_path, aiProcessPreset_TargetRealtime_MaxQuality);
 
     if (scene != nullptr && scene->HasMeshes()) {
