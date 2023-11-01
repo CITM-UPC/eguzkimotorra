@@ -4,6 +4,8 @@
 #include <vector>
 #include <string>
 
+class ComponentTransform;
+
 class Entity {
 public:
     Entity* parent;
@@ -15,6 +17,8 @@ public:
     ~Entity();
 
     void DestroyAllChildren();
+
+    ComponentTransform* transform;
 
 };
 
