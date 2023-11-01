@@ -62,7 +62,7 @@
     <PreBuildEvent>
       <Command>git submodule update --recursive --remote
 call $(SolutionDir)vcpkg\bootstrap-vcpkg.bat
-$(SolutionDir)vcpkg.exe install opengl sdl2 imgui[opengl3-binding,sdl2-binding] assimp --triplet x64-windows
+$(SolutionDir)vcpkg.exe install opengl glm sdl2 imgui[opengl3-binding,sdl2-binding] assimp --triplet x64-windows
 copy $(SolutionDir)vcpkg\installed\x64-windows\bin\*.* $(OutDir)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
@@ -86,7 +86,7 @@ copy $(SolutionDir)vcpkg\installed\x64-windows\bin\*.* $(OutDir)</Command>
     <PreBuildEvent>
       <Command>git submodule update --recursive --remote
 call $(SolutionDir)vcpkg\bootstrap-vcpkg.bat
-$(SolutionDir)vcpkg.exe install opengl sdl2 imgui[opengl3-binding,sdl2-binding] assimp --triplet x64-windows
+$(SolutionDir)vcpkg.exe install opengl glm sdl2 imgui[opengl3-binding,sdl2-binding] assimp --triplet x64-windows
 copy $(SolutionDir)vcpkg\installed\x64-windows\bin\*.* $(OutDir)</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>

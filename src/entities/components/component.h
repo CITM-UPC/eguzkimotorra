@@ -3,7 +3,7 @@
 
 class Entity;
 
-enum ComponentType {
+enum class ComponentType {
     Transform,
     Mesh,
     Texture,
