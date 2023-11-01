@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
             break;
 
         case MAIN_START:
-            LOG("Engine initialization")
+            LOG("Engine initialization");
             if (app->Init()) {
                 LOG("Engine initialized succesfully");
                 state = MAIN_UPDATE;

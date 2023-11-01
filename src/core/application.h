@@ -7,6 +7,9 @@
 #include <string>
 #include <vector>
 
+// Modules
+class MWindow;
+
 class Application {
 public:
     Application();
@@ -25,6 +28,7 @@ private:
 
 public:
     // TODO: Add modules
+    MWindow* window = nullptr;
 
     std::string name_;
     std::string version_;

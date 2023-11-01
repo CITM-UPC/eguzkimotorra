@@ -1,8 +1,12 @@
 #include "application.h"
 #include "core/logger.h"
+#include "modules/window.h"
 
 Application::Application() {
     //TODO: Create modules
+    window = new MWindow();
+    modules_.push_back(window);
+
 }
 
 Application::~Application() {
