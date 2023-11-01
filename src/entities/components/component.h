@@ -12,11 +12,11 @@ enum class ComponentType {
 
 class Component {
 public:
-    Component(Entity* owner, ComponentType type) : owner_(owner), type_(type) {}
-    virtual ~Component() {}
+    Component(Entity* owner, ComponentType type);
+    virtual ~Component();
 
-    ComponentType type() const { return type_; }
-    Entity* owner() const { return owner_; }
+    ComponentType type() const;
+    Entity* owner() const;
 
 protected:
     Entity* owner_;

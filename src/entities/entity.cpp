@@ -1,4 +1,4 @@
-#include <entity.h>
+#include "entity.h"
 
 Entity::Entity(const char* name) : name(name){
     parent = nullptr;
