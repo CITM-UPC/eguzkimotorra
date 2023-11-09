@@ -54,8 +54,8 @@ void ComponentTransform::RecalculateTransforms()  {
         local_ *= glm::mat4_cast(rotation_);
     }
 
-    if (owner_) {
-        glm::mat4 global = owner_->transform->global();
+    if (owner_->parent) {
+        glm::mat4 global = owner_->parent->transform->global();
         global_ = global * local_;
     }
     else
